@@ -1,0 +1,34 @@
+"""
+Configuration file for SpriteForge
+This file contains hardcoded API keys and model IDs for development.
+In production, these should be moved to environment variables.
+"""
+
+# IONOS AI Model Hub Configuration
+# Replace these with your actual IONOS credentials
+IONOS_CONFIG = {
+    "API_KEY": "eyJ0eXAiOiJKV1QiLCJraWQiOiJkZDZkNWExYS00NDY0LTQ0MGEtYjJhMC05NjY0Y2IzNDZiNDYiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNzQ4NDgwMjk5LCJjbGllbnQiOiJVU0VSIiwiaWRlbnRpdHkiOnsiaXNQYXJlbnQiOmZhbHNlLCJjb250cmFjdE51bWJlciI6MzM5NzEwMzMsInJvbGUiOiJvd25lciIsInJlZ0RvbWFpbiI6Imlvbm9zLmNvbSIsInJlc2VsbGVySWQiOjEsInV1aWQiOiI3YmNiNzg4MS1hZDMxLTQxMDgtOGI3Zi0wOGIyNjdiYTI0ZWUiLCJwcml2aWxlZ2VzIjpbIkRBVEFfQ0VOVEVSX0NSRUFURSIsIlNOQVBTSE9UX0NSRUFURSIsIklQX0JMT0NLX1JFU0VSVkUiLCJNQU5BR0VfREFUQVBMQVRGT1JNIiwiQUNDRVNTX0FDVElWSVRZX0xPRyIsIlBDQ19DUkVBVEUiLCJBQ0NFU1NfUzNfT0JKRUNUX1NUT1JBR0UiLCJCQUNLVVBfVU5JVF9DUkVBVEUiLCJDUkVBVEVfSU5URVJORVRfQUNDRVNTIiwiSzhTX0NMVVNURVJfQ1JFQVRFIiwiRkxPV19MT0dfQ1JFQVRFIiwiQUNDRVNTX0FORF9NQU5BR0VfTU9OSVRPUklORyIsIkFDQ0VTU19BTkRfTUFOQUdFX0NFUlRJRklDQVRFUyIsIkFDQ0VTU19BTkRfTUFOQUdFX0xPR0dJTkciLCJNQU5BR0VfREJBQVMiLCJBQ0NFU1NfQU5EX01BTkFHRV9ETlMiLCJNQU5BR0VfUkVHSVNUUlkiLCJBQ0NFU1NfQU5EX01BTkFHRV9DRE4iLCJBQ0NFU1NfQU5EX01BTkFHRV9WUE4iLCJBQ0NFU1NfQU5EX01BTkFHRV9BUElfR0FURVdBWSIsIkFDQ0VTU19BTkRfTUFOQUdFX05HUyIsIkFDQ0VTU19BTkRfTUFOQUdFX0tBQVMiLCJBQ0NFU1NfQU5EX01BTkFHRV9ORVRXT1JLX0ZJTEVfU1RPUkFHRSIsIkFDQ0VTU19BTkRfTUFOQUdFX0FJX01PREVMX0hVQiIsIkNSRUFURV9ORVRXT1JLX1NFQ1VSSVRZX0dST1VQUyIsIkFDQ0VTU19BTkRfTUFOQUdFX0lBTV9SRVNPVVJDRVMiXX0sImV4cCI6MTc1NjI1NjI5OX0.MWVvOpvWZFsqQSegbv2IowICHBug2IJODqMk9qSKLRkbzBpLf63JtXwhC8jLDzSFUBgg40mXvMMo0s0-AAcalDeCAKDMccWZYzsKuKVfalTAsh0EGhc8aegs53zXX75MYx02pBddAb2pXrQ96sOknoyffekiM0vufIkD39Rj92gXAUStt7BPjTor1eCqs48BPvHjVojdE_tVJZg5kYAq5f_nAKTT3yDj1_2CQQdtrUZVI_FY8yl5Q_0DyN4oASNDsALhIv2wr49V2dvb9EB-AqIO1TndgkyZxH66Isnz2zJ2BA1tWgSMGTnXAQXNQ5O8qXq0gq97xDoqMjVEk9TahA",  # Your actual API key
+    "CHAT_MODEL_ID": "meta-llama/llama-3.1-8b-instruct",  # Replace with your chat model ID
+    "IMAGE_MODEL_ID": "stabilityai/stable-diffusion-xl-base-1.0",  # Updated to a more common model
+}
+
+# MongoDB Configuration
+MONGODB_CONFIG = {
+    "URI": "mongodb://localhost:27017/spriteforge",  # Local MongoDB
+    # For MongoDB Atlas, use:
+    # "URI": "mongodb+srv://username:password@cluster.mongodb.net/spriteforge?retryWrites=true&w=majority"
+}
+
+# API URLs - Updated based on IONOS documentation
+API_URLS = {
+    "CHAT_BASE": "https://inference.de-txl.ionos.com",  # Updated for chat completions
+    "IMAGE_BASE": "https://openai.inference.de-txl.ionos.com/v1/images/generations"
+}
+
+# Application Settings
+APP_CONFIG = {
+    "DEBUG": True,
+    "HOST": "0.0.0.0",
+    "PORT": 5000,
+    "MAX_CONTENT_LENGTH": 16 * 1024 * 1024,  # 16MB max file size
+}
